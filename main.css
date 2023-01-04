@@ -148,6 +148,13 @@ select {
     display: none;
 }
 
+.error_next_box_blue {
+    margin-top: 9px;
+    font-size: 12px;
+    color: blue;
+    display: none;
+}
+
 #alertTxt {
     position: absolute;
     top: 19px;
