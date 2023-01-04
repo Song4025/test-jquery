@@ -1,7 +1,7 @@
 const IDCHECK = /^[A-Za-z]{1}[A-za-z0-9_]{5,19}$/;
 const PWCHECK = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
 const EMAIL = /^([\w\.\_\-])*[a-zA-Z0-9]+([\w\.\_\-])*([a-zA-Z0-9])+([\w\.\_\-])+@([a-zA-Z0-9]+\.)+[a-zA-Z0-9]{2,8}$/;
-const PHONE = /01[016789]-[^0][0-9]{2,3}-[0-9]{3,4}/;
+const PHONE = /^01[016789]-[^0][0-9]{2,3}-[0-9]{4,4}$/;
 
 $(function () {
     //  id 유효성 체크
@@ -83,7 +83,7 @@ $(function () {
     });
     let autoHypenPhone = function(str){
         str = str.replace(/[^0-9]/g, '');
-        var tmp = '';
+        let tmp = '';
         if( str.length < 4){
             return str;
         }else if(str.length < 7){
